@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SampleClass.h"
+#import "Box.h"
+#import "Shape.h"
+#import "Rectangle.h"
 
 //use a type definition to output debug messages in debug mode only
 #if DEBUG == 0
@@ -19,69 +23,6 @@
 
 //typedef
 typedef unsigned char BYTE;
-
-@interface SampleClass:NSObject
-- (void)sampleMethod;
-- (int)max:(int)num1 andNume2:(int)num2;
-- (NSString *) getEmployeeNameForID: (int) id withError:(NSError **)errorPtr;
-@end
-
-@interface Box : NSObject{
-    //Instance variables.private and only accessible inside class implementation
-    double length;
-    double breadth;
-}
-@property(nonatomic, readwrite) double height;  //Property
-@end
-
-@implementation SampleClass
-
-- (void)sampleMethod{
-    NSLog(@"Hello World! from class method");
-}
-
-- (int)max:(int)num1 andNume2:(int)num2{
-    /* local variable declaration */
-    if(num1 > num2)
-        return num1;
-    else
-        return num2;
-}
-
-/* create a custom Error */
--(NSString *) getEmployeeNameForID:(int)id withError:(NSError *__autoreleasing *)errorPtr{
-    if(id == 1)
-        return @"Employee Test Name";
-    else
-    {
-        NSString *domain = @"com.MyCompany.MyApplication.ErrorDomain";
-        NSString *desc = @"Unable to complete the process";
-        NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:desc,
-                                  @"NSLocalizedDescriptionKey",
-                                  NULL];
-        *errorPtr = [NSError errorWithDomain:domain code:-101 userInfo:userInfo];
-        return @"";
-    }
-}
-
-@end
-
-@implementation Box
-@synthesize height;
-
--(id)init
-{
-    self = [super init];
-    length = 1.0;
-    breadth = 1.0;
-    return self;
-}
--(double) volume
-{
-    return length*breadth*height;
-}
-
-@end
 
 //implement a Block, an objective-C object that represents a single task or unit of behavior
 double (^multiplyTwoValues)(double,double) =
@@ -199,6 +140,13 @@ int main(int argc, const char * argv[]) {
     NSString *dquotes = [NSString stringWithFormat:@"%@",@"\""];
     if(argc > 1)
         NSLog(@"The first argument supplied is \"%s%@", argv[1],dquotes);
+    
+    //Experiment with class inheritance
+    Shape *shape = [[Shape alloc]initWithName:@"shape1"];
+    [shape print];
+    Rectangle *rect = [[Rectangle alloc]initWithName:@"rect1" andWidth:2.0 andHeight:4.0 andColor:@"red"];
+    [rect print];
+    
     
     //object management including deallocation is no longer necessary since xcode 4.2
     //[pool drain];

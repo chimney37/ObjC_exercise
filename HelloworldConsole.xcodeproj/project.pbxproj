@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D25F097D1C375D0C0026935F /* SampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F097C1C375D0C0026935F /* SampleClass.m */; };
+		D25F09801C375E3E0026935F /* Box.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F097F1C375E3E0026935F /* Box.m */; };
+		D25F09831C3761400026935F /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F09821C3761400026935F /* Shape.m */; };
+		D25F09851C3762A90026935F /* Rectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F09841C3762A90026935F /* Rectangle.m */; };
 		D2ED8EF01C36721900BA67B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2ED8EEF1C36721900BA67B7 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D25F097B1C375C120026935F /* SampleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleClass.h; sourceTree = "<group>"; };
+		D25F097C1C375D0C0026935F /* SampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleClass.m; sourceTree = "<group>"; };
+		D25F097E1C375D9F0026935F /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		D25F097F1C375E3E0026935F /* Box.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Box.m; sourceTree = "<group>"; };
+		D25F09811C3760830026935F /* Shape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		D25F09821C3761400026935F /* Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
+		D25F09841C3762A90026935F /* Rectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rectangle.m; sourceTree = "<group>"; };
+		D25F09861C3762B70026935F /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
 		D2ED8EEC1C36721900BA67B7 /* HelloworldConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloworldConsole; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2ED8EEF1C36721900BA67B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				D2ED8EEF1C36721900BA67B7 /* main.m */,
+				D25F097B1C375C120026935F /* SampleClass.h */,
+				D25F097C1C375D0C0026935F /* SampleClass.m */,
+				D25F097E1C375D9F0026935F /* Box.h */,
+				D25F097F1C375E3E0026935F /* Box.m */,
+				D25F09811C3760830026935F /* Shape.h */,
+				D25F09821C3761400026935F /* Shape.m */,
+				D25F09841C3762A90026935F /* Rectangle.m */,
+				D25F09861C3762B70026935F /* Rectangle.h */,
 			);
 			path = HelloworldConsole;
 			sourceTree = "<group>";
@@ -118,7 +138,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25F09801C375E3E0026935F /* Box.m in Sources */,
+				D25F097D1C375D0C0026935F /* SampleClass.m in Sources */,
 				D2ED8EF01C36721900BA67B7 /* main.m in Sources */,
+				D25F09831C3761400026935F /* Shape.m in Sources */,
+				D25F09851C3762A90026935F /* Rectangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
