@@ -13,11 +13,10 @@
 
 @interface Rectangle : Shape
 {
-    double rectWidth;
-    double rectHeight;
+    CGFloat rectWidth;
+    CGFloat rectHeight;
 }
 -(id)initWithName:(NSString *)name andWidth:(double)width andHeight:(double)height andColor:(NSString *)color;
--(double)area;
 @end
 
 #endif /* Rectangle_h */

@@ -11,6 +11,7 @@
 #import "Box.h"
 #import "Shape.h"
 #import "Rectangle.h"
+#import "Square.h"
 
 //use a type definition to output debug messages in debug mode only
 #if DEBUG == 0
@@ -147,6 +148,17 @@ int main(int argc, const char * argv[]) {
     Rectangle *rect = [[Rectangle alloc]initWithName:@"rect1" andWidth:2.0 andHeight:4.0 andColor:@"red"];
     [rect print];
     
+    //experiment with polymorphism
+    Shape *square = [[Square alloc]initWithSide:10.0 andName:@"square1"];
+    [square calculateArea];
+    [square printArea];
+    [square setInternalID];
+    
+    //experiment with category and extension
+    NSLog(@"Shape name %@ has alias=%@, uniqueID=%@", [square getName],[square getAlias],[square getExternalID]);
+    
+    //experiment with protocols and delegates
+    [square startAction];
     
     //object management including deallocation is no longer necessary since xcode 4.2
     //[pool drain];

@@ -19,4 +19,33 @@
 -(void)print{
     NSLog(@"Shape name=%@", shapeName);
 }
+-(void)calculateArea{
+}
+-(void)printArea{
+    NSLog(@"Shape Area=%f",area);
+}
+-(void)setInternalID{
+    internalID = [NSString stringWithFormat: @"UNIQUEKEY%dUNIQUEKEY",arc4random()%100];
+}
+-(NSString *)getExternalID{
+    return [internalID stringByReplacingOccurrencesOfString:@"UNIQUEKEY" withString:@""];
+}
+-(void)startAction{
+    PrintClass *printClass = [[PrintClass alloc]init];
+    [printClass setDelegate:self];
+    [printClass printDetails];
+}
+-(void)processCompleted{
+    NSLog(@"Printing Process Completed");
+}
 @end
+
+@implementation Shape(myAdditions)
+-(NSString *)getAlias{
+    return  [NSString stringWithFormat:@"%@ %@", (id)self, shapeName];
+}
+-(NSString *)getName{
+    return shapeName;
+}
+@end
+

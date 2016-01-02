@@ -18,15 +18,15 @@
     rectHeight = height;
     return self;
 }
--(double)area
+-(void)calculateArea
 {
-    return rectWidth*rectHeight;
+    area = rectWidth*rectHeight;
 }
 -(void)print
 {
     NSLog(@"width=%f", rectWidth);
     NSLog(@"height=%f", rectHeight);
-    NSLog(@"area=%f", self.area);
+    NSLog(@"area=%f", area);
     NSLog(@"name=%@", shapeName);
     NSLog(@"color=%@",self.shapeColor);
 }
