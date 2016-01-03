@@ -21,5 +21,12 @@
 -(void)calculateArea{
     area=length*length;
 }
-
+-(void)calculateAreaOfSide:(CGFloat)side
+{
+    area = side*side;
+}
+-(void)printArea
+{
+    NSLog(@"The area of square is %f",area);
+}
 @end

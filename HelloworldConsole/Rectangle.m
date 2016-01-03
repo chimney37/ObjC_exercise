@@ -22,6 +22,14 @@
 {
     area = rectWidth*rectHeight;
 }
+-(void)calculateAreaOfLength:(CGFloat)length andBreadth:(CGFloat)breadth
+{
+    area = length*breadth;
+}
+-(void)printArea
+{
+    NSLog(@"The area of Rectangle is %f",area);
+}
 -(void)print
 {
     NSLog(@"width=%f", rectWidth);

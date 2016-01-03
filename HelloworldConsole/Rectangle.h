@@ -17,6 +17,9 @@
     CGFloat rectHeight;
 }
 -(id)initWithName:(NSString *)name andWidth:(double)width andHeight:(double)height andColor:(NSString *)color;
-@end
 
+-(void)calculateAreaOfLength:(CGFloat)length andBreadth:(CGFloat)breadth;
+-(void)printArea;
+
+@end
 #endif /* Rectangle_h */

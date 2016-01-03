@@ -16,7 +16,8 @@
     CGFloat length;
 }
 -(id)initWithSide:(CGFloat)side andName:(NSString*)name;
-
+-(void)calculateAreaOfSide:(CGFloat)side;
+-(void)printArea;
 @end
 
 #endif /* Square_h */

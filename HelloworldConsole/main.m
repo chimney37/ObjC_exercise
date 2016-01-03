@@ -149,7 +149,7 @@ int main(int argc, const char * argv[]) {
     [rect print];
     
     //experiment with polymorphism
-    Shape *square = [[Square alloc]initWithSide:10.0 andName:@"square1"];
+    Shape *square = [[Square alloc]initWithSide:5.0 andName:@"square1"];
     [square calculateArea];
     [square printArea];
     [square setInternalID];
@@ -159,6 +159,19 @@ int main(int argc, const char * argv[]) {
     
     //experiment with protocols and delegates
     [square startAction];
+    
+    //experiment with dynamic binding (form of polymorphism)
+    Square *square2 = [[Square alloc]init];
+    [square2 calculateAreaOfSide:10.0];
+    Rectangle *rectangle = [[Rectangle alloc]init];
+    [rectangle calculateAreaOfLength:10.0 andBreadth:5.0];
+    NSArray *shapes =[[NSArray alloc]initWithObjects: square2, rectangle, square, nil];
+    
+    for(int i=0; i < [shapes count]; i++)
+    {
+        id object = shapes[i];
+        [object printArea];
+    }
     
     //object management including deallocation is no longer necessary since xcode 4.2
     //[pool drain];
